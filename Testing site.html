@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>Dead X Creation</h1>
+    <p>High Quality Gaming Designs</p>
+
+    <a href="#store" class="btn">Explore Store</a>
+  </div>
+</section>
+<a href="" target="_blank">
+  <button>WhatsApp</button>
+</a>
+
+</body>
+<style>/* RESET */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  background: url('bg.jpg') no-repeat center/cover;
+  position: relative;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), #000);
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* TITLE ANIMATION */
+.hero h1 {
+  font-size: 50px;
+  color: cyan;
+  text-shadow: 0 0 20px cyan;
+  animation: glow 2s infinite alternate;
+}
+
+/* SUBTEXT */
+.hero p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+  padding: 12px 25px;
+  background: transparent;
+  border: 2px solid cyan;
+  color: cyan;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.btn:hover {
+  background: cyan;
+  color: black;
+  box-shadow: 0 0 20px cyan;
+}
+
+/* GLOW ANIMATION */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px cyan;
+  }
+  to {
+    text-shadow: 0 0 30px cyan;
+  }
+}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(0,255,255,0.2), transparent);
+  animation: moveBg 6s infinite alternate;
+}
+
+@keyframes moveBg {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(20px);
+  }
+}
+</style>
+</html>

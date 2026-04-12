@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<div class="navbar">
+    <div class="logo">Dead X</div>
+
+    <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#store">Store</a>
+    </div>
+</div>
+
+<section id="home">Home Section</section>
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>We create high quality gaming designs for Free Fire players. Fast delivery and affordable prices.</p>
+</section>
+<section id="services">Services Section</section>
+<<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+
+  <a href="#">WhatsApp</a>
+  <a href="#">TikTok</a>
+  <a href="#">YouTube</a>
+</section>
+<section id="store" class="store">
+  <h2>Our Designs</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="design1.jpg">
+      <h3>Gaming Logo</h3>
+      <p>Rs300</p>
+    </div>
+
+    <div class="card">
+      <img src="design2.jpg">
+      <h3>Thumbnail Design</h3>
+      <p>Rs250</p>
+    </div>
+
+    <div class="card">
+      <img src="design3.jpg">
+      <h3>Gaming Poster</h3>
+      <p>$6</p>
+    </div>
+  </div>
+</section>
+
+
+<style>
+    body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0a0a0a;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  width: 90%;
+  max-width: 900px;
+
+  padding: 12px 25px;
+  
+  border-radius: 50px;
+  
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0,255,255,0.2);
+}
+
+/* LOGO */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+/* HOVER GLOW */
+.nav-links a:hover {
+  color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* ACTIVE CLICK EFFECT */
+.nav-links a:active {
+  transform: scale(0.9);
+}
+
+/* SECTIONS */
+section {
+  height: 100vh;
+  padding-top: 120px;
+}
+
+#home { background: #050505; }
+#about { background: #0d0d0d; }
+#services { background: #111; }
+#contact { background: #161616; }
+#store { background: #1f1f1f;}
+
+/* SMOOTH SCROLL */
+html {
+  scroll-behavior: smooth;
+}
+.store {
+  width: 100%;
+  padding: 50px 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+
+  gap: 20px;
+  width: 100%;
+
+}
+
+.card {
+  width: 200px;
+  background: #111;
+  border-radius: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 15px cyan;
+}
+.about {
+  padding: 80px 20px;
+  text-align: center;
+  background: #0d0d0d;
+}
+.contact {
+  padding: 80px;
+  text-align: center;
+}
+
+.contact a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: cyan;
+  color: black;
+  text-decoration: none;
+}
+</style>
