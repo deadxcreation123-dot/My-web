@@ -425,14 +425,56 @@ html {
 }
 
 .btn2 {
-  padding: 12px 50px;
+  position: relative;
+  padding: 15px 35px;
+  font-size: 18px;
+  color: #00ff37;
   background: transparent;
-  border: 2px solid rgb(0, 255, 21);
-  color: rgb(0, 255, 0);
+  border: 2px solid #00ff00;
+  border-radius: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   text-decoration: none;
-  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
   transition: 0.3s;
 }
+.btn2:hover {
+  color: #000;
+  background: #00ff2a;
+  box-shadow:
+    0 0 10px #00ff2a,
+    0 0 20px #00da12,
+    0 0 50px #007914;
+}
+.btn2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px;
+  padding: 2px;
+  background: linear-gradient(90deg, #00ff55, #00ff55, #00ff55);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  opacity: 0;
+  transition: 0.3s;
+}
+.btn2:hover::before {
+   opacity: 1;
+  animation: borderMove 2s linear infinite;
+}
+/* Moving Border Animation */
+@keyframes borderMove {
+  0% { background-position: 0% }
+  100% { background-position: 200% }
+}
+/* Pulse Glow */
+.neon-btn:active {
+  transform: scale(0.95);
+} 
 .btn3 {
   padding: 6px 6px;
   background: transparent;
@@ -773,3 +815,10 @@ function openWhatsApp3() {
   window.open(url, "_blank");
 }
 </script>
+
+
+
+
+
+
+
