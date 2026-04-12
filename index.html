@@ -43,7 +43,7 @@
     </div>
 
     <div class="about-image">
-      <img src="about.png" alt="About Image">
+      <img src="about.jpg" alt="About Image">
     </div>
 
   </div>
@@ -328,7 +328,7 @@ html {
 
 /* about */
 .about {
-  padding: 80px 80px;
+  padding: 8px 8px;
   text-align: center;
   background: #0d0d0d;
 }
@@ -341,7 +341,7 @@ html {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  border-radius: 30px;
+  border-radius: 60px;
   background: rgb(255, 0, 0);
   color: black;
   text-decoration: none;
@@ -372,6 +372,11 @@ html {
 }
 
 /* TITLE ANIMATION */
+@font-face {
+  font-family: 'Rockybilly';
+  src: url(fonts/Rockybilly.ttf) fotmat('truetype');
+
+}
 .hero h1 {
   font-size: 29px;
   color: rgb(255, 0, 0);
@@ -418,6 +423,8 @@ html {
 html {
   scroll-behavior: smooth;
 }
+
+/* About */
 .about {
   padding: 80px 10%;
   background: #0f0f0f;
@@ -426,6 +433,7 @@ html {
 
 .about-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
@@ -438,13 +446,13 @@ html {
 }
 
 .about-text h2 {
-  font-size: 40px;
+  font-size: 70px;
   margin-bottom: 20px;
   color: #d38d25;
 }
 
 .about-text p {
-  font-size: 16px;
+  font-size: 30px;
   line-height: 1.6;
   color: #ccc;
   margin-bottom: 15px;
