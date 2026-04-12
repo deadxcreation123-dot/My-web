@@ -126,12 +126,13 @@
 <section class="payment" id="payment">
   <h2>Payment Hub</h2>
   <p>Select your payment method and confirm your order instantly</p>
-
+  <p>Please sure to send Recipt after payment</p>
   <div class="payment-cards">
 
     <div class="pay-card">
-      <h3>💳 Bank Transfer</h3>
-      <p>Secure local bank payment</p>
+      <h3>💲 Ez Cash</h3>
+      <p>Secure local Ez cash payment</p>
+      <p>Ez : 0770759088</p>
     </div>
 
     <div class="pay-card">
@@ -155,6 +156,7 @@
     </div>
 
   </div>
+  
 </section>
 <footer class="footer">
   <div class="footer-container">
@@ -200,6 +202,8 @@
   top: 15px;
   left: 50%;
   transform: translateX(-50%);
+
+  z-index: 1000;
   
   display: flex;
   justify-content: space-between;
@@ -296,11 +300,19 @@ html {
 }
 
 .card {
-  width: 220px;
-  background: #111;
-  border-radius: 20px;
-  padding: 14px;
-  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.08); /* transparent glass */
+  border-radius: 15px;
+  padding: 20px;
+  color: #fff;
+
+  backdrop-filter: blur(10px); /* main glass effect */
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s ease;
 }
 
 .card img {
@@ -353,7 +365,7 @@ html {
 /* CONTENT */
 .hero-content {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
@@ -469,11 +481,13 @@ html {
   background: #be1e1e;
 }
 .services {
-  padding: 80px 10%;
+  padding: 80px 20px;
   margin-bottom: 50px;
+  margin-top: 50px;
   background: #0d0d0d;
   color: white;
   position: relative;
+  height: auto;   /* ✅ මේක important */
 }
 
 .services-container {
@@ -494,11 +508,25 @@ html {
 }
 
 .service-cards {
-  display: flex;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
+display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
+
+/* 📱 Mobile view */
+@media (max-width: 768px) {
+  .services-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+/* 📱 Small phones */
+@media (max-width: 480px) {
+  .services-cards {
+    grid-template-columns: 1fr; /* 1 per row */
+  }
+}
+
 
 .card1 {
   background: #161616;
@@ -527,10 +555,12 @@ html {
 }
 
 .payment {
+  margin-top: 0;
   padding: 90px 10%;
   background: radial-gradient(circle at top, #111, #000);
   color: white;
   text-align: center;
+  height: auto;   /* ✅ මේක important */
 }
 
 .payment h2 {
