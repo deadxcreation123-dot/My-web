@@ -20,7 +20,8 @@
     <h1>Dead X Creation</h1>
     <p>High Quality Gaming Designs</p>
 
-    <a href="#store" class="btn">Explore Store</a>
+    
+    <a href="#store" class="btn2">Buy Designs</a>
   </div></section></section>
 
 <section id="about" class="about">
@@ -108,18 +109,33 @@
       <img src="design1.jpg">
       <h3>Gaming Logo</h3>
       <p>Rs.300</p>
+        <a id="waLink" target="_blank">
+        <button class="btn3" onclick="openWhatsApp1()">
+          Order on WhatsApp
+        </button>
+      </a>
     </div>
 
     <div class="card">
       <img src="design2.jpg">
       <h3>Thumbnail Design</h3>
       <p>Rs.250</p>
+      <a id="waLink" target="_blank">
+        <button class="btn3" onclick="openWhatsApp2()">
+          Order on WhatsApp
+        </button>
+      </a>
     </div>
 
     <div class="card">
       <img src="design3.jpg">
       <h3>Gaming Banner</h3>
       <p>Rs.400</p>
+      <a id="waLink" target="_blank">
+        <button class="btn3" onclick="openWhatsApp3()">
+          Order on WhatsApp
+        </button>
+      </a>
     </div>
   </div>
 </section>
@@ -185,6 +201,7 @@
     <p>© 2026 Dead X Creation. All Rights Reserved.</p>
   </div>
 </footer>
+
 
 
 
@@ -303,7 +320,8 @@ html {
   background: rgba(255, 255, 255, 0.08); /* transparent glass */
   border-radius: 15px;
   padding: 20px;
-  color: #fff;
+  color: #ffffff;
+  text-align: center;
 
   backdrop-filter: blur(10px); /* main glass effect */
   -webkit-backdrop-filter: blur(10px);
@@ -406,6 +424,26 @@ html {
   transition: 0.3s;
 }
 
+.btn2 {
+  padding: 12px 50px;
+  background: transparent;
+  border: 2px solid rgb(0, 255, 21);
+  color: rgb(0, 255, 0);
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+}
+.btn3 {
+  padding: 6px 6px;
+  background: transparent;
+  border: 2px solid rgb(0, 255, 21);
+  color: lime;
+  border-radius: 30px;
+  transition: 0.3s;
+  text-decoration: none;
+
+}
+
 /* BUTTON HOVER */
 .btn:hover {
   background: rgb(255, 0, 0);
@@ -446,7 +484,7 @@ html {
 
 .about-text {
   flex: 1;
-  min-width: 280px;
+  min-width: 170px;
 }
 
 .about-text h2 {
@@ -456,7 +494,7 @@ html {
 }
 
 .about-text p {
-  font-size: 30px;
+  font-size: 15px;
   line-height: 1.6;
   color: #ccc;
   margin-bottom: 15px;
@@ -703,6 +741,31 @@ function openWhatsApp() {
 function confirmPayment() {
   let message = "I have completed the payment. Please confirm my order.";
   let phone = "94770759088"; // 🔴 YOUR NUMBER
+
+  let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+
+function openWhatsApp1() {
+  let message = "Hello I Want to Buy a Gaming Logo"
+  let phone = "94770759088"; 
+
+  let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+function openWhatsApp2() {
+  let message = "Hello I Want to Buy a Thumbnail Design"
+  let phone = "94770759088"; 
+
+  let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+function openWhatsApp3() {
+  let message = "Hello I Want to Buy a Gaming Banner"
+  let phone = "94770759088"; 
 
   let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(message);
 
